@@ -16,11 +16,11 @@ const MovieDetails = ({movieFull, cast}: Props) => {
     <>
       <View style={{marginHorizontal: 20}}>
         <View style={{flexDirection: 'row'}}>
-          <Icon name="star-outline" color="grey" size={16} />
-          <Text>{movieFull.vote_average}</Text>
+          <Icon name="star" color="#ffd700" size={18} />
+          <Text style={{marginLeft: 5}}>{movieFull.vote_average}</Text>
 
           <Text style={{marginLeft: 10}}>
-            -{movieFull.genres.map(g => g.name).join(', ')}
+            {movieFull.genres.map(g => g.name).join(', ')}
           </Text>
         </View>
 

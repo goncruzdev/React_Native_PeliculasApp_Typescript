@@ -1,5 +1,5 @@
-import {View, Text, Animated, Button} from 'react-native';
-import React, {useRef} from 'react';
+import React from 'react';
+import {View, Animated, Button} from 'react-native';
 import useFade from '../hooks/useFade';
 
 const FadeScreen = () => {
@@ -22,8 +22,8 @@ const FadeScreen = () => {
           opacity: opacity,
         }}></Animated.View>
 
-      <Button onPress={fadeIn} title="animacion" />
-      <Button onPress={fadeOut} title="animacionOut" />
+      <Button onPress={() => fadeIn()} title="animacion" />
+      <Button onPress={() => fadeOut()} title="animacionOut" />
     </View>
   );
 };
